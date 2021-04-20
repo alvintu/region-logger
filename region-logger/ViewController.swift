@@ -16,9 +16,12 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     mapView.delegate = self
     locationManager.delegate = self
+    
     mapView.frame = view.bounds
     view.addSubview(mapView)
     
+    locationManager.requestAlwaysAuthorization()
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
 //    DataManager.saveCoreData(latitudeVal: 10, longitudeVal: 10)
 //    DataManager.saveCoreData(latitudeVal: 1, longitudeVal: 10)
 //    DataManager.saveCoreData(latitudeVal: 3, longitudeVal: 10)
@@ -29,11 +32,19 @@ class ViewController: UIViewController {
   
   extension ViewController: MKMapViewDelegate {
     //add relevant methods
-    
   }
 
 extension ViewController: CLLocationManagerDelegate {
   //add relevant methods
+  func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+    print("hello")
+  }
+  func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+    print("bye")
+  }
+  func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    print("authorized")
+  }
   
 }
   

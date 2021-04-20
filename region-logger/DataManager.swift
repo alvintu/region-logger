@@ -12,7 +12,7 @@ import CoreData
 class DataManager {
   
   
-  static func saveCoreData(latitudeVal: Double, longitudeVal: Double) {
+  static func save(latitudeVal: Double, longitudeVal: Double) {
     guard let appDelegate =
         UIApplication.shared.delegate as? AppDelegate else {
         return
@@ -28,24 +28,20 @@ class DataManager {
       let location = NSManagedObject(entity: entity,
                                  insertInto: managedContext)
       
-      let date = Date()
       
       location.setValue(latitudeVal, forKeyPath: "latitude")
       location.setValue(longitudeVal, forKeyPath: "longitude")
-      location.setValue(date, forKey: "time")
-    
-      do {
-          
+      location.setValue(Date(), forKey: "time")
+          do {
           try managedContext.save()
           
       } catch let error as NSError {
           
           print("Could not save. \(error), \(error.userInfo)")
-          
       }
   }
   
-  static func fetchCoreData() -> [Threshold] {
+  static func fetch() -> [Threshold] {
     guard let appDelegate =
         UIApplication.shared.delegate as? AppDelegate else {
         return []
@@ -58,14 +54,10 @@ class DataManager {
           NSFetchRequest<Threshold>(entityName: entityName)
     
       do {
-          
-          // Convert to JSON format for API call
         let thresholds = try managedContext.fetch(fetchRequest) as [Threshold]
         print(thresholds)
-        clearCoreData() //clear after fetch
+        clear() //clear after fetch
         return thresholds
-    
-          
       } catch let error as NSError {
           
           print("Could not fetch. \(error), \(error.userInfo)")
@@ -75,7 +67,7 @@ class DataManager {
   }
 
 
-  static func clearCoreData() {
+  static func clear() {
     guard let appDelegate =
         UIApplication.shared.delegate as? AppDelegate else {
         return
@@ -91,7 +83,6 @@ class DataManager {
           NSBatchDeleteRequest(fetchRequest: fetchRequest)
       
       do {
-          
           try managedContext.execute(batchDeleteRequest)
           
       } catch {
