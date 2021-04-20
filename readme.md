@@ -1,3 +1,11 @@
+## Setup
+1. Click region-logger.xcodeproj
+2. Click Play Button
+3. After app runs, go back to Xcode and click <img src= "gpxarrow.png"> on the bottom of the program
+ 
+
+
+
 ## Basic Requirements are done
 [x]Create an iOS app using coreLocation and coreData framework  
 [x]Send data to API when user enter and exit the geofence  
@@ -11,3 +19,4 @@
 [x] Remove core data boilerplate comments  
 [ ]Add actual logos on the geofence circle  
 [ ]Bonus: Integrate with Crashlytics / Google tag manager to understand user's app usage  
+
