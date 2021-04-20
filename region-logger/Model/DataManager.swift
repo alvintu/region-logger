@@ -10,8 +10,7 @@ import UIKit
 import CoreData
 
 class DataManager {
-  
-  
+
   static func save(for identifier: String, state: String, latitude: Double, longitude: Double) {
     guard let appDelegate =
         UIApplication.shared.delegate as? AppDelegate else {
@@ -30,7 +29,7 @@ class DataManager {
       
       
       location.setValue(latitude, forKeyPath: "latitude")
-    location.setValue(longitude, forKeyPath: "longitude")
+      location.setValue(longitude, forKeyPath: "longitude")
       location.setValue(state, forKeyPath: "state")
       location.setValue(Date(), forKey: "time")
           do {
