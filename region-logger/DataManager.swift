@@ -12,7 +12,7 @@ import CoreData
 class DataManager {
   
   
-  static func save(latitudeVal: Double, longitudeVal: Double) {
+  static func save(for identifier: String, state: String, latitude: Double, longitude: Double) {
     guard let appDelegate =
         UIApplication.shared.delegate as? AppDelegate else {
         return
@@ -29,8 +29,9 @@ class DataManager {
                                  insertInto: managedContext)
       
       
-      location.setValue(latitudeVal, forKeyPath: "latitude")
-      location.setValue(longitudeVal, forKeyPath: "longitude")
+      location.setValue(latitude, forKeyPath: "latitude")
+    location.setValue(longitude, forKeyPath: "longitude")
+      location.setValue(state, forKeyPath: "state")
       location.setValue(Date(), forKey: "time")
           do {
           try managedContext.save()
