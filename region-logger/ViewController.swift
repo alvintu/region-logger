@@ -22,11 +22,7 @@ class ViewController: UIViewController {
     
     locationManager.requestAlwaysAuthorization()
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//    DataManager.saveCoreData(latitudeVal: 10, longitudeVal: 10)
-//    DataManager.saveCoreData(latitudeVal: 1, longitudeVal: 10)
-//    DataManager.saveCoreData(latitudeVal: 3, longitudeVal: 10)
-//    let thresholds = DataManager.fetchCoreData()
-//    print(thresholds)
+    
   }
   func setupGeofence(){
     let radius: CLLocationDistance = 400
@@ -39,10 +35,9 @@ class ViewController: UIViewController {
     let geofenceRegionA = CLCircularRegion(center: geofenceRegionCenterA, radius: radius, identifier: "Burger_King")
     geofenceRegionA.notifyOnExit = true
     geofenceRegionA.notifyOnEntry = true
-
     mapView.setRegion(mapRegionA, animated: true)
     mapView.addOverlay(regionCircle)
-    mapView.showsUserLocation = true;
+    mapView.showsUserLocation = true
     
     if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
         self.locationManager.startMonitoring(for: geofenceRegionA)
@@ -75,11 +70,6 @@ extension ViewController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
     print("bye")
   }
-//  func location(_ manager: CLLocationManager) {
-//    print("authorized")
-//    if manager.authorizationStatus == .authorizedAlways {
-//      setupGeofence()
-//    }
   
   func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         if manager.authorizationStatus == .authorizedAlways {
