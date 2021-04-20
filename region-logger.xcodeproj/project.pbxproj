@@ -15,6 +15,7 @@
 		C2219576262F1CA90099F3E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2219575262F1CA90099F3E0 /* Assets.xcassets */; };
 		C2219579262F1CA90099F3E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2219577262F1CA90099F3E0 /* LaunchScreen.storyboard */; };
 		C2219582262F1E6C0099F3E0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2219581262F1E6C0099F3E0 /* DataManager.swift */; };
+		C2219589262F2B7B0099F3E0 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2219588262F2B7B0099F3E0 /* UIColor+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C2219578262F1CA90099F3E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C221957A262F1CA90099F3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2219581262F1E6C0099F3E0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C2219588262F2B7B0099F3E0 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C2219569262F1CA80099F3E0 /* AppDelegate.swift */,
 				C221956B262F1CA80099F3E0 /* SceneDelegate.swift */,
 				C221956D262F1CA80099F3E0 /* ViewController.swift */,
+				C2219588262F2B7B0099F3E0 /* UIColor+Random.swift */,
 				C2219581262F1E6C0099F3E0 /* DataManager.swift */,
 				C221956F262F1CA80099F3E0 /* Main.storyboard */,
 				C2219575262F1CA90099F3E0 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				C2219582262F1E6C0099F3E0 /* DataManager.swift in Sources */,
 				C2219574262F1CA80099F3E0 /* region_logger.xcdatamodeld in Sources */,
 				C221956A262F1CA80099F3E0 /* AppDelegate.swift in Sources */,
+				C2219589262F2B7B0099F3E0 /* UIColor+Random.swift in Sources */,
 				C221956C262F1CA80099F3E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
