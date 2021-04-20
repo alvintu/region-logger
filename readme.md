@@ -6,8 +6,8 @@
 
 
 ## Extras or want-to-dos
-[ ] Make Geofence construction into a class  
-[ ] Create second geofence  
-[ ] Remove core data boilerplate comments  
+[x] Make Geofence construction into a function  
+[x] Create second geofence  
+[x] Remove core data boilerplate comments  
 [ ] Add actual logos on the geofence circle  
 [ ]Bonus: Integrate with Crashlytics / Google tag manager to understand user's app usage  
