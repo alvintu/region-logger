@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
   }
   
-  private func constructGeoFence(for center: CLLocationCoordinate2D, radius: CLLocationDistance, identifier: String ) -> CLCircularRegion{
+  func constructGeoFence(for center: CLLocationCoordinate2D, radius: CLLocationDistance, identifier: String ) -> CLCircularRegion{
     let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
     let mapRegion = MKCoordinateRegion(center: center, span: span)
     let regionCircle = MKCircle(center: center, radius: radius)

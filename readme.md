@@ -2,7 +2,7 @@
 [x]Create an iOS app using coreLocation and coreData framework  
 [x]end data to API when user enter and exit the geofence  
 [x]Create minimal UI (if needed) to ask users to enable location for the app.  
-[ ]Add test and setup document with the submission for our team to review (i.e., simulate location)  
+[x]Add test and setup document with the submission for our team to review (i.e., simulate location)  
 
 
 ## Extras or want-to-dos

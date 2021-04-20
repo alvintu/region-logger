@@ -16,7 +16,18 @@
 		C2219579262F1CA90099F3E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2219577262F1CA90099F3E0 /* LaunchScreen.storyboard */; };
 		C2219582262F1E6C0099F3E0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2219581262F1E6C0099F3E0 /* DataManager.swift */; };
 		C2219589262F2B7B0099F3E0 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2219588262F2B7B0099F3E0 /* UIColor+Random.swift */; };
+		C221959A262F39DC0099F3E0 /* region_loggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2219599262F39DC0099F3E0 /* region_loggerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C221959C262F39DC0099F3E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C221955E262F1CA80099F3E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2219565262F1CA80099F3E0;
+			remoteInfo = "region-logger";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C2219566262F1CA80099F3E0 /* region-logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "region-logger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,10 +42,20 @@
 		C2219581262F1E6C0099F3E0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C2219588262F2B7B0099F3E0 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		C221958B262F2CC30099F3E0 /* route.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = route.gpx; sourceTree = "<group>"; };
+		C2219597262F39DC0099F3E0 /* region-loggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "region-loggerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2219599262F39DC0099F3E0 /* region_loggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = region_loggerTests.swift; sourceTree = "<group>"; };
+		C221959B262F39DC0099F3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C2219563262F1CA80099F3E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2219594262F39DC0099F3E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				C2219568262F1CA80099F3E0 /* region-logger */,
+				C2219598262F39DC0099F3E0 /* region-loggerTests */,
 				C2219567262F1CA80099F3E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				C2219566262F1CA80099F3E0 /* region-logger.app */,
+				C2219597262F39DC0099F3E0 /* region-loggerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +101,15 @@
 			path = "region-logger";
 			sourceTree = "<group>";
 		};
+		C2219598262F39DC0099F3E0 /* region-loggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2219599262F39DC0099F3E0 /* region_loggerTests.swift */,
+				C221959B262F39DC0099F3E0 /* Info.plist */,
+			);
+			path = "region-loggerTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,6 +130,24 @@
 			productReference = C2219566262F1CA80099F3E0 /* region-logger.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C2219596262F39DC0099F3E0 /* region-loggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C221959E262F39DC0099F3E0 /* Build configuration list for PBXNativeTarget "region-loggerTests" */;
+			buildPhases = (
+				C2219593262F39DC0099F3E0 /* Sources */,
+				C2219594262F39DC0099F3E0 /* Frameworks */,
+				C2219595262F39DC0099F3E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C221959D262F39DC0099F3E0 /* PBXTargetDependency */,
+			);
+			name = "region-loggerTests";
+			productName = "region-loggerTests";
+			productReference = C2219597262F39DC0099F3E0 /* region-loggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -109,6 +159,10 @@
 				TargetAttributes = {
 					C2219565262F1CA80099F3E0 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					C2219596262F39DC0099F3E0 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = C2219565262F1CA80099F3E0;
 					};
 				};
 			};
@@ -126,6 +180,7 @@
 			projectRoot = "";
 			targets = (
 				C2219565262F1CA80099F3E0 /* region-logger */,
+				C2219596262F39DC0099F3E0 /* region-loggerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +193,13 @@
 				C2219579262F1CA90099F3E0 /* LaunchScreen.storyboard in Resources */,
 				C2219576262F1CA90099F3E0 /* Assets.xcassets in Resources */,
 				C2219571262F1CA80099F3E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2219595262F39DC0099F3E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +219,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2219593262F39DC0099F3E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C221959A262F39DC0099F3E0 /* region_loggerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C221959D262F39DC0099F3E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2219565262F1CA80099F3E0 /* region-logger */;
+			targetProxy = C221959C262F39DC0099F3E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C221956F262F1CA80099F3E0 /* Main.storyboard */ = {
@@ -333,6 +411,46 @@
 			};
 			name = Release;
 		};
+		C221959F262F39DC0099F3E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E64ACFS2Y6;
+				INFOPLIST_FILE = "region-loggerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alvinapp.region-loggerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/region-logger.app/region-logger";
+			};
+			name = Debug;
+		};
+		C22195A0262F39DC0099F3E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E64ACFS2Y6;
+				INFOPLIST_FILE = "region-loggerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alvinapp.region-loggerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/region-logger.app/region-logger";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -350,6 +468,15 @@
 			buildConfigurations = (
 				C221957E262F1CA90099F3E0 /* Debug */,
 				C221957F262F1CA90099F3E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C221959E262F39DC0099F3E0 /* Build configuration list for PBXNativeTarget "region-loggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C221959F262F39DC0099F3E0 /* Debug */,
+				C22195A0262F39DC0099F3E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
