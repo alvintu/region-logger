@@ -28,6 +28,9 @@ class ViewController: UIViewController {
 //    let thresholds = DataManager.fetchCoreData()
 //    print(thresholds)
   }
+  func setupGeofence(){
+    
+  }
 }
   
   extension ViewController: MKMapViewDelegate {
@@ -42,8 +45,12 @@ extension ViewController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
     print("bye")
   }
-  func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+  func location(_ manager: CLLocationManager) {
     print("authorized")
+    if manager.authorizationStatus == .authorizedAlways {
+      setupGeofence()
+    }
+    
   }
   
 }
